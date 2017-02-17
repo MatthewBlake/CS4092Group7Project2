@@ -7,10 +7,11 @@ public class project2{
 		String username;
 		String password;
 		int tries  = 0;
-		while(tries<3){
+		boolean success=false;
+		while(tries<3 && success=false){
 			username = JOptionPane.showInputDialog(null, "Enter your username");
 			password = JOptionPane.showInputDialog(null, "Enter your password");
-			if(checkValidation(username, password)==true) break;
+			if(checkValidation(username, password)==true) success=true;
 			JOptionPane.showMessageDialog(null, " Invalid username or password" );
 			tries++;
 		}
