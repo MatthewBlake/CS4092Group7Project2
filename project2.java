@@ -15,6 +15,7 @@ public class project2{
 			JOptionPane.showMessageDialog(null, " Invalid username or password" );
 			tries++;
 		}
+		
 
 
 
@@ -35,11 +36,13 @@ public class project2{
 
 
 	}
-	public static void questions(){
+	public static int questions(){
 		String[][] questions=readQuestionFile();
+		int points=0;
+		
 
 
-
+		return points;
 
 	}
 	public static String[][] readQuestionFile(){
