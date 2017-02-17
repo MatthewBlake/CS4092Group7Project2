@@ -2,3 +2,5 @@
 example:
 1,2,What is an array?,A container object that holds a fixed number of values of a single type., the top of a waterfall, a single integer value, other question, cant think of an explination
 
+easy place to find questions
+http://tiger.armstrong.edu/selftest/selftest9e?chapter=6
