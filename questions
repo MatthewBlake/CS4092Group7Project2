@@ -1,1 +1,14 @@
+1,
+2,
+3,1,"abc".compareTo("aba") returns ___________.,2,1,0,-1,when .compareTo is correct it returns 2.
+3,2,____________________ returns true.,"peter".equalsIgnoreCase("Petre"),"peter".compareToIgnoreCase("peter"),"peter".equalsIgnoreCase("Peter"),"petre".equalsIgnoreCase("Peter"), equalsIgnoreCase returns a boolean.
+3,3,What is the return value of "SELECT".substring(0, 5)?,"SELEC","SELECT","SELE","ELECT", it starts from the S (0) and stops right before C (5) spot
+3,4,What is the return value of "SELECT".substring(4, 4)?,an empty string,C,T,E, The Begin Index must be smaller than the endIndex, it creates a runtime error if they are the same
+3,5,Which of the following is the correct statement to return JAVA?,"Java".toUpperCase(),"Java".toUpperCase("Java"),String.toUpperCase("Java"),toUpperCase("Java"),toUpperCase is a method that that does not intak anything to its brackets
+3,6,Which of the following is the correct statement to return a string from an array a of characters?,new String(a),toString(a),convertToString(a),String.toString(a), Its the way java works
+3,7,Assume s is " abc ", the method __________ returns a new string "abc".,s.trim(),String.trim(s),trim(s),s.trim(s), the methods trim does not take in anything within its brackets
+3,8,,Assume s is "ABCABC", the method __________ returns a new string "aBCaBC".,C. s.replace('A', 'a'),s.toLowerCase(),s.toLowerCase(s),s.replace('a', 'A'), The letter you're replacing goes first within the method
+3,9,Assume s is "ABCABC", the method __________ returns an array of characters.,s.toCharArray(),toChars(s),String.toChars(),String.toCharArray(), the method toChars does take in a string
+3,10,Which of following is not a correct method in Character?,isDigit(),isLetterOrDigit(char),isLetter(char),toLowerCase(char), isDigit() should be isDigit(char)
+4,
 
