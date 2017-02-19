@@ -61,7 +61,7 @@ public class Project2
 		
 		while(in.hasNext())
 		{
-			//splits the data, subset 0 is username, subset 1 is 
+			//splits the data, subscript 0 is username, subscript 1 is 
 			data = in.nextLine().split(",");
 			
 			//checks if the username and password supplied matches what's on file
@@ -76,11 +76,14 @@ public class Project2
 	{
 		String choice = JOptionPane.showInputDialog(null, "Hi " + username + ", welcome to the Multiple Choice Practice Test!\nPlease choose a topic below!\n1... Arrays\n2... Syntax\n3... String Manipulation\n4... <no idea yet>");
 		String pattern = "[1-4]{1}";
-		while(choice != null)
+		boolean isProgramLaunched = false;
+		
+		while(choice != null && !isProgramLaunched)
 		{
 			if(choice.matches(pattern))
 			{
-				getQuestions(Integer.parseInt(choice));
+				getQuestions(choice);
+				isProgramLaunched = true;
 			}
 			else
 				JOptionPane.showMessageDialog(null, "Error, please input a number between 1 and 4");
@@ -89,25 +92,56 @@ public class Project2
 	}
 	
 	//Gets questions for the topic selected by the user
-	public static void getQuestions(int topic) throws IOException
+	public static void getQuestions(String topic) throws IOException
 	{
 		FileReader file = new FileReader("questions.txt");
 		Scanner in = new Scanner(file);
 		
-		String[] data;
+		String[] data = new String[9];
+		int[] randomNumbers;
+		
+		String topicName, input;
+		
+		switch(topic)
+		{
+			case "1": 	topicName = "Arrays"; break;
+			case "2":		topicName = "Syntax"; break;
+			case "3":		topicName = "String Manipulation"; break;
+			default: 		topicName = "<no idea yet>";
+		}
 		
 		//splits the data so we can check if the topic corresponds with subscript 0 etc.
 		while(in.hasNext())
 		{
-			//TODO
-			//Splits the data, subset 0 = topic, subset 1 = question number, subset 2 = question, subset 4 = correct answer, subset 5 = possible answer 1, subset 6 = possible answer 2, subset 7 = possible answer 3, subset 8 = explanation
-		}
-		
-	
+			//Splits the data, subscript 0 = topic, subscript 1 = question number, subscript 2 = question, subscript 4 = correct answer, subscript 5 = possible answer 1, subscript 6 = possible answer 2, subscript 7 = possible answer 3, subscript 8 = explanation
+			data = in.nextLine().split(" , ");
+			
+			//Checks to see if the topic number is equal to the choice supplied by the usesr
+			if (data[0].matches(topic))
+			{
+				randomNumbers = getRandomNumbers();
+				input = JOptionPane.showInputDialog(null, "You have entered topic " + data[0] + ", " + topicName + "\n");
+				//This break is ony here temporarily until I fix the JOptionPane stuff. Pls dont kill me Annette
+				break;
+				
 		//TODO
-		//a method to choose and randomise the questions and answers.
+		//output questions and take in answers from the user
 		//track score in the users.txt file
-		//output current and overall score to the user
+		//output current and overall score to the user		
+			}
+		}
+		in.close();
+		file.close();
 	}
-
+	//Gonna use this to output a random order of questions to the user
+	public static int[] getRandomNumbers()
+	{
+		int[] randomNumbers = new int[5];
+		
+		for(int i = 0;i < randomNumbers.length - 1;i++)
+		{
+			randomNumbers[i] = (int)(Math.random() * (5 - 1) + 1);
+		}
+		return randomNumbers;
+	}	
 }
