@@ -1,5 +1,16 @@
 1,
-2,
+
+2,1, Each pass through a loop is called a/an,enumeration,iteration,pass through,iteration is the repetition of a procsess.
+2,2, In a nested loop, which loop is executed the most times?, inner loop,outerloop,both are the same,the inner loop as it is repeated as many times as itself and the outter loop
+2,3, in a for looop what is the equivilant of i++, i--, i+i,i+1,i+1 beceause you increase i by one everytime you iterate.  
+2,4, in a for loop what allows you to check array size?,.length,.matches,.split,.length as you need the length of the array.
+2,5, What's wrong?  for (int k = 2, k <= 12, k++),there should be a semicolon at the end,there should be full stop at the end,the commas should be semicolons,correct the commas should be semicolons
+2,6 What's wrong?  while( (i < 10) && (i > 24), the while loop is an exit-condition loop,the test condition is always false,the test condition is always true, the condition is always false
+2,7,Which of the following operators are right-associative,*,+,=,%,= is the correct answer
+2,8,in a loop what would you use {} for?,to hold a block of conditions together,to create an array,to prevent errors,to hold a block of condition 
+2,9,What value is stored in num at the end of this looping? for (num = 1; num <= 5; num++),4,5,6,6 is stored in num
+2,10, What is wrong? for (j = 1;j <= 5; j+),J+,<=,=,J+ is supposed to be J++
+
 3,1,"abc".compareTo("aba") returns ___________.,2,1,0,-1,when .compareTo is correct it returns 2.
 3,2,____________________ returns true.,"peter".equalsIgnoreCase("Petre"),"peter".compareToIgnoreCase("peter"),"peter".equalsIgnoreCase("Peter"),"petre".equalsIgnoreCase("Peter"), equalsIgnoreCase returns a boolean.
 3,3,What is the return value of "SELECT".substring(0, 5)?,"SELEC","SELECT","SELE","ELECT", it starts from the S (0) and stops right before C (5) spot
