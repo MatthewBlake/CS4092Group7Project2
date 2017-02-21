@@ -139,19 +139,19 @@ public class Project2
 		FileReader file = new FileReader("users.txt");
 		Scanner in = new Scanner(file);
 		String[] data;
-		
+		int score = 0;
 		while(in.hasNext()){
 			//splits the data, subscript 0 is username, subscript 1 is 
 			data = in.nextLine().split(",");
 			
 			//checks if the username and password supplied matches what's on file
-			if(username.matches(data[0]))	isValid = true;
+			if(username.matches(data[0]))	score=Integer.parseInt(data[2]);
 		
 		}
 		in.close();
 		file.close();
 		
-	
+		return score
 	
 	}
 	//Gonna use this to output a random order of questions to the user
