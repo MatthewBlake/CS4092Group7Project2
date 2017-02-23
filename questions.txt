@@ -7,10 +7,10 @@
 1 , 7 , Which of the following is incorrect? , int[] a = new int(2); , int a[] = new int[2]; , int[] a = new int[2]; , int[] a = {3, 2, 5, 7}; , To make an array object in java, you must state the data type followed by square brackets and the variable name, and set it equal to a new object of that datatype with square brackets following it stating the size of the array
 1 , 8 , Analyze the following code:\nint[] list = new int[5];\nlist = new int[6]; ,  The code can compile and run fine. The second line assigns a new array to 'list' , The code has compile errors because the variable list cannot be changed once it is assigned , The code has runtime errors because the variable list cannot be changed once it is assigned , The code has compile errors because you cannot assign a different size array to 'list'
 
-2,1, Each pass through a loop is called a/an,enumeration,iteration,pass through,iteration is the repetition of a procsess.
-2,2, In a nested loop, which loop is executed the most times?, inner loop,outerloop,both are the same,the inner loop as it is repeated as many times as itself and the outter loop
-2,3, in a for looop what is the equivilant of i++, i--, i+i,i+1,i+1 beceause you increase i by one everytime you iterate.  
-2,4, in a for loop what allows you to check array size?,.length,.matches,.split,.length as you need the length of the array.
+2 , 1 , Each pass through a loop is called a/an , iteration , enumeration , pass through , loop through , iteration is the repetition of a procsess.
+2 , 2 , In a nested loop , which loop is executed the most times? , inner loop , outerloop , both are the same , non are executed , the inner loop as it is repeated as many times as itself and the outter loop
+2 , 3 , in a for looop what is the equivilant of i++ , i-- , i+i , i+1 , i+1 , i-1 , beceause you increase i by one everytime you iterate.  
+2, 4 , in a for loop what allows you to check array size?,.length,.matches,.split,.length as you need the length of the array.
 2,5, What's wrong?  for (int k = 2, k <= 12, k++),there should be a semicolon at the end,there should be full stop at the end,the commas should be semicolons,correct the commas should be semicolons
 2,6, What's wrong?  while( (i < 10) && (i > 24), the while loop is an exit-condition loop,the test condition is always false,the test condition is always true, the condition is always false
 2,7,Which of the following operators are right-associative,*,+,=,%,= is the correct answer
