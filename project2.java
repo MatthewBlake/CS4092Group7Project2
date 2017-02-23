@@ -64,7 +64,7 @@ public class Project2
 		while(in.hasNext())
 		{
 			//splits the data, subscript 0 is username, subscript 1 is 
-			data = in.nextLine().split(" , ");
+			data = in.nextLine().split(",");
 			
 			//checks if the username and password supplied matches what's on file
 			if(username.matches(data[0]) && password.matches(data[1]))	isValid = true;
@@ -122,9 +122,10 @@ public class Project2
 			if (data[0].matches(topic))
 			{
 				randomNumbers = getRandomNumbers();
-				input = JOptionPane.showInputDialog(null, "You have entered topic " + data[0] + ", " + topicName + "\n");
-				//This break is ony here temporarily until I fix the JOptionPane stuff. Pls dont kill me Annette
-				break;
+				input = JOptionPane.showMessageDialog(null, "You have entered topic " + data[0] + ", " + topicName + "\n");
+				
+				
+				
 				
 		//TODO
 		//output questions and take in answers from the user
