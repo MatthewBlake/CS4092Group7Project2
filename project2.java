@@ -138,18 +138,23 @@ public class Project2
 	
 	public static int getUserScore(String username) 
 	{
-			FileReader aFileReader = new FileReader("users.txt");
-			Scanner in = new Scanner(aFileReader);
+
 			int score = 0;
 			String[] data;
 			try
 			{
-				while(in.hasNext)
+				FileReader aFileReader = new FileReader("users.txt");
+				Scanner in = new Scanner(aFileReader);
+				while(in.hasNext())
 				{
 					data = (in.nextLine().split(" , "));
 					
-					if(data[0].matches(username))		score = data[2];	
+					if(data[0].matches(username))		score = Integer.parseInt(data[2]);	
 				}
+			}
+			catch(FileNotFoundException e)
+			{
+				JOptionPane.showMessageDialog(null, "Error, users.txt not found");
 			}
 			return score;
 	}
