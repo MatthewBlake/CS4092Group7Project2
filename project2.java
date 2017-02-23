@@ -31,6 +31,8 @@ public class Project2
 						//if it is correct then it launches the program
 						validDetails = true;
 						programLauncher(username);   
+						
+						int score = getUserScore(username);
 				
 					}
 					//if it isn't correct then it tells the user and then starts again with the tries counter incremented.
@@ -62,7 +64,7 @@ public class Project2
 		while(in.hasNext())
 		{
 			//splits the data, subscript 0 is username, subscript 1 is 
-			data = in.nextLine().split(",");
+			data = in.nextLine().split(" , ");
 			
 			//checks if the username and password supplied matches what's on file
 			if(username.matches(data[0]) && password.matches(data[1]))	isValid = true;
@@ -133,27 +135,25 @@ public class Project2
 		in.close();
 		file.close();
 	}
-	//this function will read user.txt and return the score of the user
-	public static int getUserScore(String username){
-		
-		FileReader file = new FileReader("users.txt");
-		Scanner in = new Scanner(file);
-		String[] data;
-		int score = 0;
-		while(in.hasNext()){
-			//splits the data, subscript 0 is username, subscript 1 is 
-			data = in.nextLine().split(",");
-			
-			//checks if the username and password supplied matches what's on file
-			if(username.matches(data[0]))	score=Integer.parseInt(data[2]);
-		
-		}
-		in.close();
-		file.close();
-		
-		return score
 	
+	public static int getUserScore(String username) 
+	{
+			FileReader aFileReader = new FileReader("users.txt");
+			Scanner in = new Scanner(aFileReader);
+			int score = 0;
+			String[] data;
+			try
+			{
+				while(in.hasNext)
+				{
+					data = (in.nextLine().split(" , "));
+					
+					if(data[0].matches(username))		score = data[2];	
+				}
+			}
+			return score;
 	}
+
 	//Gonna use this to output a random order of questions to the user
 	public static int[] getRandomNumbers()
 	{
