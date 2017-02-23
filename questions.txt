@@ -28,5 +28,13 @@
 3 , 8 , Assume s is "ABCABC" , the method __________ returns a new string "aBCaBC". , s.replace('A', 'a') , s.toLowerCase() , s.toLowerCase(s) , s.replace('a', 'A') , The letter you're replacing goes first within the method
 3,9,Assume s is "ABCABC", the method __________ returns an array of characters.,s.toCharArray(),toChars(s),String.toChars(),String.toCharArray(), the method toChars does take in a string
 3,10,Which of following is not a correct method in Character?,isDigit(),isLetterOrDigit(char),isLetter(char),toLowerCase(char), isDigit() should be isDigit(char)
-4,
+
+4, 1, What is the correct way of importing JOptionPane?,import javax.swing.joptionpane, import javax.swing.JOptionPane, import javax.swing.JoptionPane;,import javax.swing.joptionpane;, import javax.swing.JoptionPane; is the correct way of importing JOptionPane
+4, 2, Which number makes an i appear in the dialog box?, 1, 2, -1, 0, 1 makes an i appear
+4, 3, Which number makes an X appear in the dialog box?, 1, 2, -1, 0, 0 makes an X appear
+4, 4, Which number makes no symbol appear in the dialog box?, 1, 2, -1, 0, -1 makes no symbol appear
+4, 5, Which number makes a question mark appear in the dialog box?, 1, 2, -1, 0, 2 makes a question mark appear
+4, 6, Which of these lines allows input to be taken in from a dialog box?, JOptionPane.showMessageDialog(null, "");, JOptionPane.showinputdialog(null, "");, JOptionPane.showmessagedialog(null, "");, JOptionPane.showInputDialog(null, "");, JOptionPane.showInputDialog(null, ""); allows for input to be taken from the end user
+4, 7, Which position in the brackets allows you to change the message displayed in the top left corner of the dialog box?, First, Second, Third, Fourth, The third position allows you to change the message
+
 
